@@ -3,7 +3,6 @@
 
 ## 📄 `Day1.md`
 
-```markdown
 # Day 1: Customer Churn Prediction with Gradient Boosting & SHAP
 
 ## 📘 Project Definition
@@ -59,13 +58,14 @@ Customer retention is crucial to business revenue, making churn prediction a key
 
 ## 📈 Results
 
-- **ROC-AUC**: 0.85  
-- **F1-score**: 0.78  
-- Top churn drivers:  
-  1. Contract type  
-  2. Monthly charges  
-  3. Payment method  
-  4. Tenure  
+- **ROC-AUC**: 0.82  
+- **F1-score**: 0.61  
+- Top predictors include:
+  - **Contract type**
+  - **MonthlyCharges**
+  - **tenure**
+  - **OnlineSecurity**
+  - **TechSupport**
 
 ---
 
@@ -85,10 +85,3 @@ Customer retention is crucial to business revenue, making churn prediction a key
 - Gradient Boosting with tuning.  
 - Explainability with SHAP.  
 
----
-
-## 🚀 Next Steps
-
-- Test ensemble methods (stacked models).  
-- Deploy as API for real-time churn prediction.  
-- Combine ML with business rules for proactive retention strategies.  
