@@ -1,8 +1,3 @@
-
----
-
-## 📄 `Day1.md`
-
 # Day 1: Customer Churn Prediction with Gradient Boosting & SHAP
 
 ## 📘 Project Definition
@@ -84,4 +79,5 @@ Customer retention is crucial to business revenue, making churn prediction a key
 - Handling imbalanced data using SMOTE.  
 - Gradient Boosting with tuning.  
 - Explainability with SHAP.  
+
 
