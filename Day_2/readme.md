@@ -73,7 +73,11 @@ The dataset is **highly imbalanced** (~0.17% fraud cases), making this problem c
   - F1: 0.7847
 
 - **Isolation Forest**:  
-  - Detected 70% of fraud cases without labels, showing anomaly potential.  
+  - ROC-AUC: 0.9562
+  - PR-AUC: 0.1808
+  - Precision: 0.0017
+  - Recall: 1.0000 `Perfect`
+  - F1: 0.0034  
 
 - **Voting Ensemble** (XGBoost + SMOT + Logistic):  
   - Accuracy: 0.9993153330290369
@@ -98,3 +102,4 @@ The dataset is **highly imbalanced** (~0.17% fraud cases), making this problem c
 - Combination of **supervised + unsupervised** approaches.  
 - Model explainability via SHAP on PCA components.  
 - Ensemble modeling for improved robustness.  
+
