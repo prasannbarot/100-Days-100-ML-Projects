@@ -22,13 +22,18 @@ Helps optimize energy distribution, reduce costs, and manage grid load.
 ---
 
 ## Approach
-1. Data preprocessing & hourly resampling  
-2. Feature engineering (lags, rolling mean/std, time features)  
-3. Regression models: Linear Regression, Random Forest, XGBoost  
-4. Ensemble: Voting Regressor  
-5. Evaluation: RMSE, MAE, R², plots  
-6. SHAP for feature importance
-
+1. Load & clean
+2. EDA (rich)
+3. Aggregation to hourly series
+4. Aggregation to hourly series
+5. Feature engineering (lags, rolling stats, time features, holiday flags)
+6. Train/validation split with rolling time-series CV
+7. Baselines: Naive & SeasonalNaive
+8. SARIMAX
+9. XGBoost (improved tree-boosting)
+10. LSTM (added deep learning model for better accuracy)
+11. SHAP explainability (for XGBoost)
+12. Backtest report + 24h ahead forecast demo (fixed recursive updates)
 ---
 
 ## Results
@@ -56,3 +61,4 @@ To get started, install the required packages:
 pip install ucimlrepo
 
 ```
+
