@@ -32,10 +32,11 @@ Helps optimize energy distribution, reduce costs, and manage grid load.
 ---
 
 ## Results
-- RMSE: 0.22 kW  
-- MAE: 0.15 kW  
-- R²: 0.87  
-- Ensemble outperforms single models, captures daily/weekly trends
+-	SARIMAX: MAE 0.9604 | RMSE 1.2253 — struggled with volatility
+-	LSTM: MAE 0.3176 | RMSE 0.4654 — captured temporal dynamics but lacked precision
+-	GBR: MAE 0.0026 — near-perfect fit
+-	XGBoost: MAE 0.0038 | RMSE 0.0121 — consistent across folds and test set
+
 
 ---
 
@@ -53,4 +54,5 @@ To get started, install the required packages:
 
 ```bash
 pip install ucimlrepo
+
 ```
