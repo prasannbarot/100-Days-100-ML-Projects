@@ -50,8 +50,6 @@ Predict job salary from job postings by fusing Transformer-based text embeddings
 - Example metrics (your run may vary):  
   - RMSE: \$8,000 - \$15,000 depending on data coverage.  
   - MAE: \$4,000 - \$9,000.  
-  - R² (log): 0.65 - 0.85.
-
 ---
 
 ## 🔑 Skills Demonstrated
@@ -61,9 +59,3 @@ Predict job salary from job postings by fusing Transformer-based text embeddings
 - Explainable AI with SHAP for tabular drivers.  
 - End-to-end reproducible pipeline and artifact saving.
 
----
-
-## 🚀 Next Steps
-- Fine-tune the Transformer on job descriptions for domain specificity.  
-- Add location-level cost-of-living normalization.  
-- Deploy model as API for salary benchmarking tools.
