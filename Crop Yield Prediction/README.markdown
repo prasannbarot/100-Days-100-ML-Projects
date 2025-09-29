@@ -5,7 +5,7 @@ This project predicts crop yields using climate, pesticide, and agricultural dat
 
 This repository is ideal for data scientists, agronomists, and researchers interested in climate-aware crop yield prediction. It was developed as a personal project to showcase data science skills and is shared on [GitHub](https://github.com/prasannbarot) and [LinkedIn](https://www.linkedin.com/in/prasannbarot/).
 
-## Dataset
+## Dataset 9in the data file)
 The dataset is sourced from the [Crop Yield Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset), combining:
 - **pesticides.csv**: Pesticide usage by country, crop, and year (source: FAO).
 - **rainfall.csv**: Annual rainfall by country (source: World Bank).
@@ -22,7 +22,8 @@ The dataset is sourced from the [Crop Yield Prediction Dataset on Kaggle](https:
 - **data/**: Contains raw input files (`pesticides.csv`, `rainfall.csv`, `temp.csv`, `yield.csv`) and the processed `enhanced_yield_df.csv`.
 - **crop_yield_prediction.py**: Main Python script with data preprocessing, EDA, feature engineering, model training, and evaluation.
 - **README.md**: This file, providing project overview and instructions.
-- **[merge_datasets.py](merge_datasets.py)**: Output directory for EDA visualizations (e.g., histograms, boxplots, SHAP plots).
+- **merge_dataset**: This file contain feature engineering and process of marging 4 csv files to make one usefull marged dataset.
+- **output.png**: This is output screenshort of the model performance as SHAP plot representation. 
 
 ## Features
 - **Data Preprocessing**: Merges raw CSV files, handles missing values (forward-fill, median imputation), and standardizes units.
