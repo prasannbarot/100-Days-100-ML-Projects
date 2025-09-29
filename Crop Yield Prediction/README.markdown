@@ -5,7 +5,7 @@ This project predicts crop yields using climate, pesticide, and agricultural dat
 
 This repository is ideal for data scientists, agronomists, and researchers interested in climate-aware crop yield prediction. It was developed as a personal project to showcase data science skills and is shared on [GitHub](https://github.com/prasannbarot) and [LinkedIn](https://www.linkedin.com/in/prasannbarot/).
 
-## Dataset 9in the data file)
+## Dataset (in the **data** file)
 The dataset is sourced from the [Crop Yield Prediction Dataset on Kaggle](https://www.kaggle.com/datasets/patelris/crop-yield-prediction-dataset), combining:
 - **pesticides.csv**: Pesticide usage by country, crop, and year (source: FAO).
 - **rainfall.csv**: Annual rainfall by country (source: World Bank).
