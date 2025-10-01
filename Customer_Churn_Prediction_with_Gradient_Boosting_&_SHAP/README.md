@@ -7,7 +7,7 @@ Customer retention is crucial to business revenue, making churn prediction a key
 ---
 
 ## 📂 Dataset
-- Source: [Telco Customer Churn Dataset](https://raw.githubusercontent.com/datasciencedojo/datasets/master/Telco-Customer-Churn.csv)  
+- Source: [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)  
 - Rows: 7043  
 - Target: `Churn` (Yes/No)
 
@@ -79,3 +79,4 @@ Customer retention is crucial to business revenue, making churn prediction a key
 - Handling imbalanced data using SMOTE.  
 - Gradient Boosting with tuning.  
 - Explainability with SHAP.  
+
