@@ -1,7 +1,5 @@
 # Day 6 : Wildfire Risk Prediction 
 
-![Wildfire Risk Banner](https://images.unsplash.com/photo-1621008488-7e8b07e48f00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80)
-
 ## Overview
 
 This project predicts wildfire risk and facilitates early detection using NASA's FIRMS (Fire Information for Resource Management System) VIIRS satellite data. The Jupyter notebook (`Day6_WildfireRisk_Fixed.ipynb`) processes FIRMS data (or synthetic data if unavailable), performs exploratory data analysis (EDA), engineers features, trains machine learning models, and generates visualizations to forecast next-day fire occurrence in spatial grid cells.
@@ -187,11 +185,8 @@ Contributions are welcome! To contribute:
 
 Report bugs or suggest enhancements via GitHub Issues.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
 ## Contact
-For questions or feedback, reach out to [Your Email] or open an issue on GitHub.
+For questions or feedback, reach out to [barotprasann@gmail.com] or open an issue on GitHub.
 
 ---
 *Last Updated: October 9, 2025*
