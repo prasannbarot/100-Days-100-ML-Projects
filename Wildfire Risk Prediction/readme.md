@@ -20,11 +20,25 @@ Wildfires are uncontrolled vegetation fires influenced by weather, fuel load, an
 
 **Key Concepts**:
 - **Ignition Risk**: Driven by factors like temperature, humidity, wind, and recent fire activity. This project uses satellite-derived fire detections to model historical patterns.
-- **Fire Spread**: Governed by Rothermel's fire spread model:
-  \[
-  R = \frac{I_R \cdot \xi \cdot (1 + \phi_w + \phi_s)}{\rho_b \cdot \epsilon \cdot Q_{ig}}
-  \]
-  where \( R \) is the spread rate, \( I_R \) is reaction intensity, \( \xi \) is propagating flux ratio, \( \phi_w \) and \( \phi_s \) are wind and slope factors, \( \rho_b \) is bulk density, \( \epsilon \) is effective heating number, and \( Q_{ig} \) is heat of pre-ignition. This project simplifies to ignition probability due to data constraints.
+- **Fire Spread**: Fire spread is governed by **Rothermel's fire spread model**:
+
+$$
+R = \frac{I_R \cdot \xi \cdot (1 + \phi_w + \phi_s)}{\rho_b \cdot \epsilon \cdot Q_{ig}}
+$$
+
+Where:
+
+- \( R \): Spread rate  
+- \( I_R \): Reaction intensity  
+- \( \xi \): Propagating flux ratio  
+- \( \phi_w \): Wind factor  
+- \( \phi_s \): Slope factor  
+- \( \rho_b \): Bulk density  
+- \( \epsilon \): Effective heating number  
+- \( Q_{ig} \): Heat of pre-ignition  
+
+> This project simplifies the model to focus on **ignition probability** due to data constraints.
+
 - **Class Imbalance**: Fire events are rare, leading to imbalanced datasets. Techniques like `scale_pos_weight` in boosting models or `class_weight="balanced"` in RandomForest address this by prioritizing the minority class (fire occurrences).
 
 ### Satellite Data: FIRMS and VIIRS
@@ -35,11 +49,22 @@ Wildfires are uncontrolled vegetation fires influenced by weather, fuel load, an
   - **Confidence**: Categorized as low/nominal/high based on detection reliability.
   - **Day/Night**: Nighttime detections may be more reliable due to reduced solar interference.
 
-**Theory**: Fire detection relies on thermal contrast, modeled by Planck's law:
-\[
-B(\lambda, T) = \frac{2hc^2}{\lambda^5} \frac{1}{e^{hc/\lambda kT} - 1}
-\]
-where hotter fires emit more radiation in shorter wavelengths (TI4), enabling detection of smaller or hotter fires.
+**Theory: Fire Detection via Thermal Contrast** Fire detection relies on **thermal contrast**, modeled by **Planck's law**:
+
+$$
+B(\lambda, T) = \frac{2hc^2}{\lambda^5} \cdot \frac{1}{e^{hc/(\lambda kT)} - 1}
+$$
+
+Where:
+
+- \( B(\lambda, T) \): Spectral radiance  
+- \( \lambda \): Wavelength  
+- \( T \): Temperature  
+- \( h \): Planck's constant  
+- \( c \): Speed of light  
+- \( k \): Boltzmann constant  
+
+ **Insight**: Hotter fires emit more radiation at shorter wavelengths (e.g., TI4 band), enabling detection of **smaller or hotter fires**.
 
 ### Feature Engineering
 The project creates features to capture:
@@ -49,11 +74,24 @@ The project creates features to capture:
 - **Seasonality**: Cyclical encoding of day-of-year (`doy_sin`, `doy_cos`).
 
 ### Machine Learning Models
-- **LightGBM/XGBoost**: Gradient boosting trees optimized for tabular data. Handle imbalance via weighted loss functions.
-  \[
-  L = \sum l(y_i, \hat{y}_i) + \Omega(f)
-  \]
-  where \( l \) is the loss function (e.g., log loss), and \( \Omega \) regularizes tree complexity.
+**LightGBM / XGBoost: Gradient Boosting for Tabular Data**
+**LightGBM** and **XGBoost** are gradient boosting frameworks optimized for structured/tabular datasets. They effectively handle class imbalance using **weighted loss functions**.
+
+Objective Function
+
+The general form of the objective function is:
+
+$$
+L = \sum l(y_i, \hat{y}_i) + \Omega(f)
+$$
+
+Where:
+
+- \( l(y_i, \hat{y}_i) \): Loss function (e.g., log loss)  
+- \( \Omega(f) \): Regularization term to control tree complexity  
+
+These models are widely used for classification, regression, and ranking tasks due to their speed, accuracy, and flexibility.
+
 - **RandomForest**: Ensemble of decision trees, robust to overfitting and interpretable.
 - **Evaluation Metrics**:
   - **AUC-ROC**: Measures ranking ability across thresholds.
@@ -91,7 +129,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn lightgbm xgboost joblib
 
 2. **Run the Notebook**:
    ```bash
-   jupyter notebook Day6_WildfireRisk_Fixed.ipynb
+   jupyter notebook Day6_WildfireRisk.ipynb
    ```
    The notebook:
    - Loads and preprocesses FIRMS data, handling single-day cases with a random train-test split.
@@ -187,7 +225,3 @@ Report bugs or suggest enhancements via GitHub Issues.
 
 ## Contact
 For questions or feedback, reach out to [barotprasann@gmail.com] or open an issue on GitHub.
-
----
-*Last Updated: October 9, 2025*
-```
