@@ -1,4 +1,4 @@
-# Crop Yield Prediction: Climate-Aware Machine Learning Model
+# Day 3 : Crop Yield Prediction: Climate-Aware Machine Learning Model
 
 ## Project Overview
 This project predicts crop yields using climate, pesticide, and agricultural data, leveraging advanced machine learning techniques. It builds on the **Crop Yield Prediction Dataset** from Kaggle, merging raw data files (`pesticides.csv`, `rainfall.csv`, `temp.csv`, `yield.csv`) into a unified dataset for robust analysis. The project features enhanced exploratory data analysis (EDA), feature engineering, and multiple machine learning models (Random Forest, XGBoost, LightGBM, and an ensemble) to forecast crop yields globally. Visualizations and SHAP explainability provide deep insights into feature impacts, making this a comprehensive tool for agricultural analytics.
