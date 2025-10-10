@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project predicts wildfire risk and facilitates early detection using NASA's FIRMS (Fire Information for Resource Management System) VIIRS satellite data. The Jupyter notebook (`Day6_WildfireRisk_Fixed.ipynb`) processes FIRMS data (or synthetic data if unavailable), performs exploratory data analysis (EDA), engineers features, trains machine learning models, and generates visualizations to forecast next-day fire occurrence in spatial grid cells.
+This project predicts wildfire risk and facilitates early detection using NASA's FIRMS (Fire Information for Resource Management System) VIIRS satellite data. The Jupyter notebook (`Day6_WildfireRisk.ipynb`) processes FIRMS data (or synthetic data if unavailable), performs exploratory data analysis (EDA), engineers features, trains machine learning models, and generates visualizations to forecast next-day fire occurrence in spatial grid cells.
 
 The project is designed to showcase advanced data science skills, including geospatial time-series analysis, handling imbalanced datasets, and creating professional visualizations. It is optimized for low computational resources, making it suitable for personal machines or educational demonstrations.
 
