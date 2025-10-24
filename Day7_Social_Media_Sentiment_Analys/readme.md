@@ -9,16 +9,16 @@ This project performs sentiment analysis on a large corpus of tweets using both 
 ## Project Structure
 
 
-Day7_SentimentAnalysis/ 
-├── data/ 
-│    ├── raw/               # Raw tweet datasets 
-│    └── processed/         # Cleaned tweet datasets 
-├── scripts/ 
-│    ├── download_data.py   # Script to fetch raw data 
-│    └── preprocess.py      # Text cleaning and feature extraction 
-├── artifacts/              # Saved models, metrics, and visualizations 
-├── Day7_SentimentAnalysis.ipynb  # Main notebook 
-└── README.md              # Full project documentation
+Day7_SentimentAnalysis/  
+├── data/  
+│    ├── raw/               # Raw tweet datasets  
+│    └── processed/         # Cleaned tweet datasets  
+├── scripts/  
+│    ├── download_data.py   # Script to fetch raw data  
+│    └── preprocess.py      # Text cleaning and feature extraction  
+├── artifacts/              # Saved models, metrics, and visualizations  
+├── Day7_SentimentAnalysis.ipynb  # Main notebook  
+└── README.md              # Full project documentation  
 
 ---
 
@@ -125,4 +125,5 @@ Day7_SentimentAnalysis/
 
 **Prasann Dineshbhai Barot**  
 Data Science & AI Consultant | Business Analyst | Educator  
+
 Specialties: KPI design, analytics integration, behavioral support, and technical mentoring
