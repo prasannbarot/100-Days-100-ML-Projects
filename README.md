@@ -53,7 +53,8 @@ Each day introduces a new **real-world ML challenge**, complete with:
 | 4 | Crop Yield Prediction (Climate + Agriculture) | Regression | Multivariate Modeling, Geo-Agriculture Data |
 | 5 | Job Salary Prediction (Transformer Text Embeddings + Tabular Fusion) | NLP | Stacking ensemble (LightGBM + XGBoost → Ridge meta-model) |
 | 6 | Wildfire Risk Prediction | Geospatial time-series analysis | Compares LightGBM, XGBoost, and RandomForest classifiers |
-| 7 | [Upcoming Project] | — | — |
+| 7 | Sentiment Analysis on Tweets | NLP |  LR and RandomForest classifiers, SMAP |
+| 8 | [Upcoming Project] | — | — |
 
 >  Each project includes both `.ipynb` notebooks and supporting `.py` utility scripts for modularity.
 
