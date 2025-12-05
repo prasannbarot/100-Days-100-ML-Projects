@@ -178,7 +178,7 @@ This project is organized into clear modules for **data management**, **scripts*
 #### Root Directory
 
 DAY_8_MOVIE_RECOMMENDATION_SYSTEM/  
- ├── data/   
+ ├── data/ (Unfortunately, due to memory constraints on GitHub, I could not upload the data files.)   
  │ ├── raw/   
  │ └── processed/   
  ├── scripts/   
@@ -266,4 +266,5 @@ data/processed/
 **Prasann Barot**  
 Lead Data Scientist & AI Consultant  
 Day 8 of #100DaysOfML  
+
 Toronto, Canada  
