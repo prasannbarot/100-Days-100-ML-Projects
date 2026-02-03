@@ -54,7 +54,11 @@ Each day introduces a new **real-world ML challenge**, complete with:
 | 5 | Job Salary Prediction (Transformer Text Embeddings + Tabular Fusion) | NLP | Stacking ensemble (LightGBM + XGBoost → Ridge meta-model) |
 | 6 | Wildfire Risk Prediction | Geospatial time-series analysis | Compares LightGBM, XGBoost, and RandomForest classifiers |
 | 7 | Sentiment Analysis on Tweets | NLP |  LR and RandomForest classifiers, SMAP |
-| 8 | [Upcoming Project] | — | — |
+| 8 | Movie_Recommendation_System MovieLens 20M dataset | Hybrid Ensemble | Collaborative Filtering (CF) — user-based similarity. 
+                                                               Matrix Factorization (SVD) — latent factor decomposition.
+                                                               Content-Based Filtering (CB) — genome and genre similarity|
+| 9 | Predicting Market Hype with NLP & Machine Learning | Scraping | VADER, FinBERT, Random Forest Regressor |
+| 10 | [Upcoming Project] | — | — |
 
 >  Each project includes both `.ipynb` notebooks and supporting `.py` utility scripts for modularity.
 
