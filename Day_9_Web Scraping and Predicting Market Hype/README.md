@@ -4,7 +4,7 @@
 ###  The Core Idea
 Traditional market models rely on **Efficient Market Hypothesis (EMH)**, assuming all known information is reflected in prices. However, modern "Meme Stock" cycles (TSLA, GME, AMC) prove that **Retail Sentiment**—the collective psychological state of social media communities—acts as a massive driver of short-term volatility.
 
-This project investigates the **Sentiment-to-Price Transmission Mechanism**. By quantifying the "mood" of `r/WallStreetBets`, we attempt to model the psychological momentum that precedes price action. We treat social media not as "noise," but as a leading indicator of liquidity shifts.
+This project investigates the **Sentiment-to-Price Transmission Mechanism**. By quantifying the "mood" of `r/WallStreetBets`, I attempt to model the psychological momentum that precedes price action. I treat social media not as "noise," but as a leading indicator of liquidity shifts.
 
 
 
@@ -23,14 +23,14 @@ This project investigates the **Sentiment-to-Price Transmission Mechanism**. By 
 
 ###  Strategic Objectives
 1. **High-Fidelity NLP:** Move beyond simple word-counts to **Contextual Embeddings** using `FinBERT`, a BERT model pre-trained specifically on financial corpora (Reuters, TRC2-financial) to understand nuances like "Long," "Short," "Bullish," and "Crash."
-2. **Predictive Feature Engineering:** Solve the "simultaneity bias" by implementing **Time-Lagged Features**. Instead of saying "Sentiment is high today and Price is high today," we ask: *"Does high sentiment at T-1 predict a positive return at T+0?"*S
+2. **Predictive Feature Engineering:** Solve the "simultaneity bias" by implementing **Time-Lagged Features**. Instead of saying "Sentiment is high today and Price is high today," I ask: *"Does high sentiment at T-1 predict a positive return at T+0?"*S
 3. **Hardware-Resilient Pipeline:** Implement a **Dual-Engine Failover Strategy**. If the system encounters memory constraints or network timeouts during the FinBERT download, it gracefully degrades to a local **VADER** heuristic engine to ensure 100% uptime.
 4. **Actionable Intelligence:** Bridge the gap between "Black Box" machine learning and human decision-making via a **Streamlit Operational Dashboard**.
 
 ---
 
 ###  The "ML Innovation" for Day 9
-Unlike standard sentiment projects that just plot a graph, Day 9 introduces a **Multivariate Random Forest Strategy**. We don't just look at the sentiment score; we analyze:
+Unlike standard sentiment projects that just plot a graph, Day 9 introduces a **Multivariate Random Forest Strategy**. I don't just look at the sentiment score; I analyze:
 - **Sentiment Momentum:** Is the community getting happier or sadder *faster*?
 - **Discussion Density:** Does a high sentiment score carry more weight if 1,000 people are talking vs. 10?
 
@@ -65,7 +65,7 @@ Raw data undergoes a rigorous 3-step transformation before reaching the ML model
 ---
 
 ###  Feature Engineering (The "Alpha" Generation)
-To provide the Random Forest with predictive power, we don't just pass raw scores. We engineer **Semantic Derivatives**:
+To provide the Random Forest with predictive power, I don't just pass raw scores. I engineer **Semantic Derivatives**:
 
 1. **Sentiment Momentum ($\Delta S$):** Calculated as $S_t - S_{t-1}$. A rapid shift from neutral to positive is often more predictive of a "breakout" than a sustained high score.
 2. **Lagged Sentiment ($S_{t-1}$):** This addresses the **Information Diffusion** theory—the idea that it takes time for social media hype to translate into actual brokerage orders and price moves.
@@ -85,7 +85,7 @@ While deep learning (LSTM/GRU) is popular for time-series, I selected the **Rand
 
 
 ### 2. Multivariate Feature Engineering (The 4-D Vector)
-To provide the model with a holistic view of "Community Hype," we construct a 4-dimensional feature vector for every time step $T$:
+To provide the model with a holistic view of "Community Hype," I construct a 4-dimensional feature vector for every time step $T$:
 
 | Feature | Mathematical Representation | Financial Significance |
 | :--- | :--- | :--- |
@@ -103,7 +103,7 @@ $$R_{t+1} = \frac{Price_{t+1} - Price_t}{Price_t}$$
 
 
 ### 4. Model Persistence (The Production Mindset)
-In professional ML Engineering, we don't just "run" a model; we "deploy" it.
+In professional ML Engineering, I don't just "run" a model; I "deploy" it.
 - **Serialization:** Using `joblib`, the trained model weights and the scaler state are serialized into binary files. 
 - **Inference Ready:** This allows the `web_app/` and `alerts.py` scripts to perform real-time predictions without needing to re-fetch the entire training history, significantly reducing latency.
 
@@ -188,4 +188,5 @@ To evolve this Day 9 proof-of-concept into a production-grade quantitative tool,
 1. **Slang-Aware Tokenization:** Developing custom regex layers to handle Reddit-specific vernacular (e.g., "Diamond Hands," "Tendies," "Mooning") which traditional NLP models often misclassify.
 2. **Entity Recognition (NER):** Implementing `spaCy` to automatically detect new trending tickers that aren't currently in the watchlist.
 3. **Sentiment Skew Analysis:** Moving beyond the "Mean Score" to analyze the **Sentiment Distribution** (Skewness/Kurtosis) to identify if a community is truly unified or deeply polarized.
+
 
